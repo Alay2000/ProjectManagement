@@ -92,7 +92,7 @@ def velochart():
     for i in data1:
         first.append(i[0])
     
-    cur.execute('select count(*) from issue where not status="completed" group by project')
+    cur.execute('select count(*) from issue where status="completed" group by project')
     data2=cur.fetchall()
     for i in data2:
         second.append(i[0])
